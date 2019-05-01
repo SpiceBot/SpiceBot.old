@@ -26,14 +26,14 @@ class SopelDBCache:
         # self.execute('DELETE value FROM nick_values WHERE slug = ? AND key = ?', [nick_id, key])
 
         self.execute(
-            'DELETE value FROM nicknames JOIN nick_values '
+            'DELETE FROM nicknames JOIN nick_values '
             'ON nicknames.nick_id = nick_values.nick_id '
             'WHERE slug = ? AND key = ?', [nick.lower(), key])
 
     def reset_channel_value(self, channel, key):
         """Resets the value for a given key to be associated with a channel."""
         channel = Identifier(channel).lower()
-        self.execute('DELETE value FROM channel_values WHERE channel = ? AND key = ?', [channel, key])
+        self.execute('DELETE FROM channel_values WHERE channel = ? AND key = ?', [channel, key])
 
 
 @sopel.module.commands('dbreset')
