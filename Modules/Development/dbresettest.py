@@ -23,7 +23,7 @@ class SopelDBCache:
         """Resets the value for a given key to be associated with the nick."""
         nick = Identifier(nick)
         nick_id = self.get_nick_id(nick)
-        self.execute('DELETE (?) FROM nick_values WHERE (?)', [key, nick_id])
+        self.execute('DELETE ? FROM nick_values WHERE ?', [key, nick_id])
 
 
 @sopel.module.commands('dbreset')
