@@ -34,6 +34,8 @@ class SopelDBCache:
 @sopel.module.commands('dbreset')
 def mainfunction(bot, trigger):
 
+    bot.db.set_nick_value('deathbybandaid', 'weaponsb', 3)
+
     testval = 1
     bot.say("value is " + str(bot.db.get_nick_value('deathbybandaid', 'weapons')))
 
@@ -46,3 +48,5 @@ def mainfunction(bot, trigger):
     bot.db.reset_nick_value('deathbybandaid', 'weapons')
 
     bot.say("value is " + str(bot.db.get_nick_value('deathbybandaid', 'weapons')))
+
+    bot.say("valueb is " + str(bot.db.get_nick_value('deathbybandaid', 'weaponsb')))
