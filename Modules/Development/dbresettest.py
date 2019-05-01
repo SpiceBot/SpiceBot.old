@@ -5,16 +5,17 @@ from __future__ import unicode_literals, absolute_import, print_function, divisi
 # sopel imports
 import sopel.module
 from sopel.tools import stderr, Identifier
-from sopel.db import _deserialize
+
+from sopel import db
 
 
 def setup(bot):
 
     bot.memory['Sopel_DatabaseCache'] = dict()
 
-    # Inject OSD
+    # Inject Database Functions
     stderr("[Sopel_DatabaseCache] Implanting Database functions into bot.")
-    bot.db.reset_nick_value = SopelDBCache.reset_nick_value
+    db.reset_nick_value = SopelDBCache.reset_nick_value
 
 
 class SopelDBCache:
@@ -30,14 +31,14 @@ class SopelDBCache:
 def mainfunction(bot, trigger):
 
     testval = 1
-    bot.say("value is " + str(bot.db.get_nick_value('nick', 'key')))
+    bot.say("value is " + str(bot.db.get_nick_value('deathbybandaid', 'weapons')))
 
     bot.say("setting value to " + str(testval))
-    bot.db.set_nick_value('nick', 'key', testval)
+    bot.db.set_nick_value('deathbybandaid', 'weapons', testval)
 
-    bot.say("value is " + str(bot.db.get_nick_value('nick', 'key')))
+    bot.say("value is " + str(bot.db.get_nick_value('deathbybandaid', 'weapons')))
 
     bot.say("resetting value")
-    bot.db.reset_nick_value('nick', 'key')
+    bot.db.reset_nick_value('deathbybandaid', 'weapons')
 
-    bot.say("value is " + str(bot.db.get_nick_value('nick', 'key')))
+    bot.say("value is " + str(bot.db.get_nick_value('deathbybandaid', 'weapons')))
