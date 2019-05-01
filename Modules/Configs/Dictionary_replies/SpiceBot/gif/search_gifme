@@ -1,0 +1,7 @@
+{
+"validcoms": ['gifme'],
+"?default": {
+              "type": "gif",
+              "blank_required": True,
+              },
+}

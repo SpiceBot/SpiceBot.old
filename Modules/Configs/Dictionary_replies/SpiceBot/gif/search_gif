@@ -1,0 +1,12 @@
+{
+"validcoms": ['gif'],
+"?default": {
+              "type": "gif",
+              "blank_required": True,
+              },
+"roulette": {
+              "type": "gif",
+              "responses": ['Starter Pack'],
+              "updates_enabled": "shared",
+              },
+}

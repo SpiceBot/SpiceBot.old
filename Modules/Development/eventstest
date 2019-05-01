@@ -1,0 +1,1265 @@
+#!/usr/bin/env python
+# coding=utf-8
+from __future__ import unicode_literals, absolute_import, print_function, division
+
+# sopel imports
+from sopel import module
+from sopel.tools import stderr
+
+
+@module.event('NICK')
+@module.rule('.*')
+def parse_event_NICK(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('QUIT')
+@module.rule('.*')
+def parse_event_QUIT(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('PART')
+def parse_event_PART(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('MODE')
+@module.rule('.*')
+def parse_event_MODE(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('KICK')
+@module.rule('.*')
+def parse_event_KICK(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('JOIN')
+@module.rule('.*')
+def parse_event_JOIN(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('INVITE')
+@module.rule('.*')
+def parse_event_INVITE(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+@module.event('TOPIC')
+@module.rule('.*')
+def parse_event_TOPIC(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WELCOME = '001'
+@module.event('001')
+@module.rule('.*')
+def parse_event_001(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_YOURHOST = '002'
+@module.event('002')
+@module.rule('.*')
+def parse_event_002(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_CREATED = '003'
+@module.event('003')
+@module.rule('.*')
+def parse_event_003(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_MYINFO = '004'
+@module.event('004')
+@module.rule('.*')
+def parse_event_004(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_BOUNCE = '005'
+@module.event('005')
+@module.rule('.*')
+def parse_event_005(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ISUPPORT = '005'
+@module.event('005')
+@module.rule('.*')
+def parse_event_005b(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACELINK = '200'
+@module.event('200')
+@module.rule('.*')
+def parse_event_200(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACECONNECTING = '201'
+@module.event('201')
+@module.rule('.*')
+def parse_event_201(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACEHANDSHAKE = '202'
+@module.event('202')
+@module.rule('.*')
+def parse_event_202(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACEUNKNOWN = '203'
+@module.event('203')
+@module.rule('.*')
+def parse_event_203(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACEOPERATOR = '204'
+@module.event('204')
+@module.rule('.*')
+def parse_event_204(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACEUSER = '205'
+@module.event('205')
+@module.rule('.*')
+def parse_event_205(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACESERVER = '206'
+@module.event('206')
+@module.rule('.*')
+def parse_event_206(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACESERVICE = '207'
+@module.event('207')
+@module.rule('.*')
+def parse_event_207(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACENEWTYPE = '208'
+@module.event('208')
+@module.rule('.*')
+def parse_event_208(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACECLASS = '209'
+@module.event('209')
+@module.rule('.*')
+def parse_event_209(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACERECONNECT = '210'
+@module.event('210')
+@module.rule('.*')
+def parse_event_210(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSLINKINFO = '211'
+@module.event('211')
+@module.rule('.*')
+def parse_event_211(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSCOMMANDS = '212'
+@module.event('212')
+@module.rule('.*')
+def parse_event_212(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSCLINE = '213'
+@module.event('213')
+@module.rule('.*')
+def parse_event_213(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSNLINE = '214'
+@module.event('214')
+@module.rule('.*')
+def parse_event_214(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSILINE = '215'
+@module.event('215')
+@module.rule('.*')
+def parse_event_215(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSKLINE = '216'
+@module.event('216')
+@module.rule('.*')
+def parse_event_216(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSYLINE = '218'
+@module.event('218')
+@module.rule('.*')
+def parse_event_218(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFSTATS = '219'
+@module.event('219')
+@module.rule('.*')
+def parse_event_219(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_UMODEIS = '221'
+@module.event('221')
+@module.rule('.*')
+def parse_event_221(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_SERVLIST = '234'
+@module.event('234')
+@module.rule('.*')
+def parse_event_234(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_SERVLISTEND = '235'
+@module.event('235')
+@module.rule('.*')
+def parse_event_235(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSLLINE = '241'
+@module.event('241')
+@module.rule('.*')
+def parse_event_241(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSUPTIME = '242'
+@module.event('242')
+@module.rule('.*')
+def parse_event_242(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSOLINE = '243'
+@module.event('243')
+@module.rule('.*')
+def parse_event_243(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STATSHLINE = '244'
+@module.event('244')
+@module.rule('.*')
+def parse_event_244(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LUSERCLIENT = '251'
+@module.event('251')
+@module.rule('.*')
+def parse_event_251(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LUSEROP = '252'
+@module.event('252')
+@module.rule('.*')
+def parse_event_252(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LUSERUNKNOWN = '253'
+@module.event('253')
+@module.rule('.*')
+def parse_event_253(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LUSERCHANNELS = '254'
+@module.event('254')
+@module.rule('.*')
+def parse_event_254(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LUSERME = '255'
+@module.event('255')
+@module.rule('.*')
+def parse_event_255(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ADMINME = '256'
+@module.event('256')
+@module.rule('.*')
+def parse_event_256(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ADMINLOC1 = '257'
+@module.event('257')
+@module.rule('.*')
+def parse_event_257(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ADMINLOC2 = '258'
+@module.event('258')
+@module.rule('.*')
+def parse_event_258(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ADMINEMAIL = '259'
+@module.event('259')
+@module.rule('.*')
+def parse_event_259(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACELOG = '261'
+@module.event('261')
+@module.rule('.*')
+def parse_event_261(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRACEEND = '262'
+@module.event('262')
+@module.rule('.*')
+def parse_event_262(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TRYAGAIN = '263'
+@module.event('263')
+@module.rule('.*')
+def parse_event_263(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_NONE = '300'
+@module.event('300')
+@module.rule('.*')
+def parse_event_300(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_AWAY = '301'
+@module.event('301')
+@module.rule('.*')
+def parse_event_301(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_USERHOST = '302'
+@module.event('302')
+@module.rule('.*')
+def parse_event_302(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ISON = '303'
+@module.event('303')
+@module.rule('.*')
+def parse_event_303(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_UNAWAY = '305'
+@module.event('305')
+@module.rule('.*')
+def parse_event_305(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_NOWAWAY = '306'
+@module.event('306')
+@module.rule('.*')
+def parse_event_306(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOISUSER = '311'
+@module.event('311')
+@module.rule('.*')
+def parse_event_311(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOISSERVER = '312'
+@module.event('312')
+@module.rule('.*')
+def parse_event_312(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOISOPERATOR = '313'
+@module.event('313')
+@module.rule('.*')
+def parse_event_313(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOWASUSER = '314'
+@module.event('314')
+@module.rule('.*')
+def parse_event_314(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFWHO = '315'
+@module.event('315')
+@module.rule('.*')
+def parse_event_315(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOISIDLE = '317'
+@module.event('317')
+@module.rule('.*')
+def parse_event_317(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFWHOIS = '318'
+@module.event('318')
+@module.rule('.*')
+def parse_event_318(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOISCHANNELS = '319'
+@module.event('319')
+@module.rule('.*')
+def parse_event_319(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LISTSTART = '321'
+@module.event('321')
+@module.rule('.*')
+def parse_event_321(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LIST = '322'
+@module.event('322')
+@module.rule('.*')
+def parse_event_322(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LISTEND = '323'
+@module.event('323')
+@module.rule('.*')
+def parse_event_323(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_CHANNELMODEIS = '324'
+@module.event('324')
+@module.rule('.*')
+def parse_event_324(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_UNIQOPIS = '325'
+@module.event('325')
+@module.rule('.*')
+def parse_event_325(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_NOTOPIC = '331'
+@module.event('331')
+@module.rule('.*')
+def parse_event_331(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TOPIC = '332'
+@module.event('332')
+@module.rule('.*')
+def parse_event_332(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_INVITING = '341'
+@module.event('341')
+@module.rule('.*')
+def parse_event_341(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_SUMMONING = '342'
+@module.event('342')
+@module.rule('.*')
+def parse_event_342(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_INVITELIST = '346'
+@module.event('346')
+@module.rule('.*')
+def parse_event_346(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFINVITELIST = '347'
+@module.event('347')
+@module.rule('.*')
+def parse_event_347(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_EXCEPTLIST = '348'
+@module.event('348')
+@module.rule('.*')
+def parse_event_348(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFEXCEPTLIST = '349'
+@module.event('349')
+@module.rule('.*')
+def parse_event_349(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_VERSION = '351'
+@module.event('351')
+@module.rule('.*')
+def parse_event_351(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOREPLY = '352'
+@module.event('352')
+@module.rule('.*')
+def parse_event_352(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_NAMREPLY = '353'
+@module.event('353')
+@module.rule('.*')
+def parse_event_353(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOSPCRPL = '354'
+@module.event('354')
+@module.rule('.*')
+def parse_event_354(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LINKS = '364'
+@module.event('364')
+@module.rule('.*')
+def parse_event_364(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFLINKS = '365'
+@module.event('365')
+@module.rule('.*')
+def parse_event_365(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFNAMES = '366'
+@module.event('366')
+@module.rule('.*')
+def parse_event_366(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_BANLIST = '367'
+@module.event('367')
+@module.rule('.*')
+def parse_event_367(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFBANLIST = '368'
+@module.event('368')
+@module.rule('.*')
+def parse_event_368(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFWHOWAS = '369'
+@module.event('369')
+@module.rule('.*')
+def parse_event_369(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_INFO = '371'
+@module.event('371')
+@module.rule('.*')
+def parse_event_371(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_MOTD = '372'
+@module.event('372')
+@module.rule('.*')
+def parse_event_372(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFINFO = '374'
+@module.event('374')
+@module.rule('.*')
+def parse_event_374(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_MOTDSTART = '375'
+@module.event('375')
+@module.rule('.*')
+def parse_event_375(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFMOTD = '376'
+@module.event('376')
+@module.rule('.*')
+def parse_event_376(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_YOUREOPER = '381'
+@module.event('381')
+@module.rule('.*')
+def parse_event_381(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_REHASHING = '382'
+@module.event('382')
+@module.rule('.*')
+def parse_event_382(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_YOURESERVICE = '383'
+@module.event('383')
+@module.rule('.*')
+def parse_event_383(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_TIME = '391'
+@module.event('391')
+@module.rule('.*')
+def parse_event_391(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_USERSSTART = '392'
+@module.event('392')
+@module.rule('.*')
+def parse_event_392(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_USERS = '393'
+@module.event('393')
+@module.rule('.*')
+def parse_event_393(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFUSERS = '394'
+@module.event('394')
+@module.rule('.*')
+def parse_event_394(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_NOUSERS = '395'
+@module.event('395')
+@module.rule('.*')
+def parse_event_395(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOSUCHNICK = '401'
+@module.event('401')
+@module.rule('.*')
+def parse_event_401(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOSUCHSERVER = '402'
+@module.event('402')
+@module.rule('.*')
+def parse_event_402(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOSUCHCHANNEL = '403'
+@module.event('403')
+@module.rule('.*')
+def parse_event_403(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_CANNOTSENDTOCHAN = '404'
+@module.event('404')
+@module.rule('.*')
+def parse_event_404(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_TOOMANYCHANNELS = '405'
+@module.event('405')
+@module.rule('.*')
+def parse_event_405(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_WASNOSUCHNICK = '406'
+@module.event('406')
+@module.rule('.*')
+def parse_event_406(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_TOOMANYTARGETS = '407'
+@module.event('407')
+@module.rule('.*')
+def parse_event_407(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOSUCHSERVICE = '408'
+@module.event('408')
+@module.rule('.*')
+def parse_event_408(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOORIGIN = '409'
+@module.event('409')
+@module.rule('.*')
+def parse_event_409(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_INVALIDCAPCMD = '410'
+@module.event('410')
+@module.rule('.*')
+def parse_event_410(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NORECIPIENT = '411'
+@module.event('411')
+@module.rule('.*')
+def parse_event_411(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOTEXTTOSEND = '412'
+@module.event('412')
+@module.rule('.*')
+def parse_event_412(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOTOPLEVEL = '413'
+@module.event('413')
+@module.rule('.*')
+def parse_event_413(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_WILDTOPLEVEL = '414'
+@module.event('414')
+@module.rule('.*')
+def parse_event_414(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_BADMASK = '415'
+@module.event('415')
+@module.rule('.*')
+def parse_event_415(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_UNKNOWNCOMMAND = '421'
+@module.event('421')
+@module.rule('.*')
+def parse_event_421(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOMOTD = '422'
+@module.event('422')
+@module.rule('.*')
+def parse_event_422(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOADMININFO = '423'
+@module.event('423')
+@module.rule('.*')
+def parse_event_423(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_FILEERROR = '424'
+@module.event('424')
+@module.rule('.*')
+def parse_event_424(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NONICKNAMEGIVEN = '431'
+@module.event('431')
+@module.rule('.*')
+def parse_event_431(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_ERRONEUSNICKNAME = '432'
+@module.event('432')
+@module.rule('.*')
+def parse_event_432(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NICKNAMEINUSE = '433'
+@module.event('433')
+@module.rule('.*')
+def parse_event_433(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NICKCOLLISION = '436'
+@module.event('436')
+@module.rule('.*')
+def parse_event_436(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_UNAVAILRESOURCE = '437'
+@module.event('437')
+@module.rule('.*')
+def parse_event_437(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_USERNOTINCHANNEL = '441'
+@module.event('441')
+@module.rule('.*')
+def parse_event_441(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOTONCHANNEL = '442'
+@module.event('442')
+@module.rule('.*')
+def parse_event_442(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_USERONCHANNEL = '443'
+@module.event('443')
+@module.rule('.*')
+def parse_event_443(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOLOGIN = '444'
+@module.event('444')
+@module.rule('.*')
+def parse_event_444(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_SUMMONDISABLED = '445'
+@module.event('445')
+@module.rule('.*')
+def parse_event_445(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_USERSDISABLED = '446'
+@module.event('446')
+@module.rule('.*')
+def parse_event_446(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOTREGISTERED = '451'
+@module.event('451')
+@module.rule('.*')
+def parse_event_451(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NEEDMOREPARAMS = '461'
+@module.event('461')
+@module.rule('.*')
+def parse_event_461(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_ALREADYREGISTRED = '462'
+@module.event('462')
+@module.rule('.*')
+def parse_event_462(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOPERMFORHOST = '463'
+@module.event('463')
+@module.rule('.*')
+def parse_event_463(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_PASSWDMISMATCH = '464'
+@module.event('464')
+@module.rule('.*')
+def parse_event_464(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_YOUREBANNEDCREEP = '465'
+@module.event('465')
+@module.rule('.*')
+def parse_event_465(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_YOUWILLBEBANNED = '466'
+@module.event('466')
+@module.rule('.*')
+def parse_event_466(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_KEYSET = '467'
+@module.event('467')
+@module.rule('.*')
+def parse_event_467(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_CHANNELISFULL = '471'
+@module.event('471')
+@module.rule('.*')
+def parse_event_471(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_UNKNOWNMODE = '472'
+@module.event('472')
+@module.rule('.*')
+def parse_event_472(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_INVITEONLYCHAN = '473'
+@module.event('473')
+@module.rule('.*')
+def parse_event_473(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_BANNEDFROMCHAN = '474'
+@module.event('474')
+@module.rule('.*')
+def parse_event_474(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_BADCHANNELKEY = '475'
+@module.event('475')
+@module.rule('.*')
+def parse_event_475(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_BADCHANMASK = '476'
+@module.event('476')
+@module.rule('.*')
+def parse_event_476(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOCHANMODES = '477'
+@module.event('477')
+@module.rule('.*')
+def parse_event_477(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_BANLISTFULL = '478'
+@module.event('478')
+@module.rule('.*')
+def parse_event_478(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOPRIVILEGES = '481'
+@module.event('481')
+@module.rule('.*')
+def parse_event_481(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_CHANOPRIVSNEEDED = '482'
+@module.event('482')
+@module.rule('.*')
+def parse_event_482(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_CANTKILLSERVER = '483'
+@module.event('483')
+@module.rule('.*')
+def parse_event_483(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_RESTRICTED = '484'
+@module.event('484')
+@module.rule('.*')
+def parse_event_484(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_UNIQOPPRIVSNEEDED = '485'
+@module.event('485')
+@module.rule('.*')
+def parse_event_485(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOOPERHOST = '491'
+@module.event('491')
+@module.rule('.*')
+def parse_event_491(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_UMODEUNKNOWNFLAG = '501'
+@module.event('501')
+@module.rule('.*')
+def parse_event_501(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_USERSDONTMATCH = '502'
+@module.event('502')
+@module.rule('.*')
+def parse_event_502(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_STARTTLS = '670'
+@module.event('670')
+@module.rule('.*')
+def parse_event_670(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_STARTTLS = '691'
+@module.event('691')
+@module.rule('.*')
+def parse_event_691(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_MONONLINE = '730'
+@module.event('730')
+@module.rule('.*')
+def parse_event_730(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_MONOFFLINE = '731'
+@module.event('731')
+@module.rule('.*')
+def parse_event_731(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_MONLIST = '732'
+@module.event('732')
+@module.rule('.*')
+def parse_event_732(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_ENDOFMONLIST = '733'
+@module.event('733')
+@module.rule('.*')
+def parse_event_733(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_MONLISTFULL = '734'
+@module.event('734')
+@module.rule('.*')
+def parse_event_734(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_WHOISKEYVALUE = '760'
+@module.event('760')
+@module.rule('.*')
+def parse_event_760(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_KEYVALUE = '761'
+@module.event('761')
+@module.rule('.*')
+def parse_event_761(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_METADATAEND = '762'
+@module.event('762')
+@module.rule('.*')
+def parse_event_762(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_METADATALIMIT = '764'
+@module.event('764')
+@module.rule('.*')
+def parse_event_764(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_TARGETINVALID = '765'
+@module.event('765')
+@module.rule('.*')
+def parse_event_765(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NOMATCHINGKEY = '766'
+@module.event('766')
+@module.rule('.*')
+def parse_event_766(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_KEYINVALID = '767'
+@module.event('767')
+@module.rule('.*')
+def parse_event_767(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_KEYNOTSET = '768'
+@module.event('768')
+@module.rule('.*')
+def parse_event_768(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_KEYNOPERMISSION = '769'
+@module.event('769')
+@module.rule('.*')
+def parse_event_769(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LOGGEDIN = '900'
+@module.event('900')
+@module.rule('.*')
+def parse_event_900(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_LOGGEDOUT = '901'
+@module.event('901')
+@module.rule('.*')
+def parse_event_901(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_NICKLOCKED = '902'
+@module.event('902')
+@module.rule('.*')
+def parse_event_902(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_SASLSUCCESS = '903'
+@module.event('903')
+@module.rule('.*')
+def parse_event_903(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_SASLFAIL = '904'
+@module.event('904')
+@module.rule('.*')
+def parse_event_904(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_SASLTOOLONG = '905'
+@module.event('905')
+@module.rule('.*')
+def parse_event_905(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_SASLABORTED = '906'
+@module.event('906')
+@module.rule('.*')
+def parse_event_906(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# ERR_SASLALREADY = '907'
+@module.event('907')
+@module.rule('.*')
+def parse_event_907(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+
+
+# RPL_SASLMECHS = '908'
+@module.event('908')
+@module.rule('.*')
+def parse_event_908(bot, trigger):
+   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")

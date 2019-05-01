@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# coding=utf-8
+from __future__ import unicode_literals, absolute_import, print_function, division
+
+# sopel imports
+import sopel.module
+
+# imports for system and OS access, directories
+import os
+import sys
+
+
+# imports based on THIS file
+moduledir = os.path.dirname(__file__)
+shareddir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(shareddir)
+from BotShared import *
+
+
+
+
+
+
+
+"""
+This Runs at start, waits for the amount of channels to exceed 0, in the case of an IRC bouncer like ZNC
+"""
+
+
+# Start listener on welcome RPL, which should only ever be received once
+@module.event('001')
+@module.rule('.*')
+@module.thread(True)
+def watch_server_connection(bot, trigger):
+
+    if bot_startup_requirements_met(bot, ["connected"]):
+        return
+
+    while not len(bot.channels.keys()) > 0:
+        pass
+    time.sleep(1)
+
+    bot_startup_requirements_set(bot, "connected")
