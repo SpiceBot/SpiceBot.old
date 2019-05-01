@@ -5,8 +5,7 @@ from __future__ import unicode_literals, absolute_import, print_function, divisi
 # sopel imports
 import sopel.module
 from sopel.tools import stderr, Identifier
-
-from sopel import db
+from sopel.db import SopelDB
 
 
 def setup(bot):
@@ -15,7 +14,7 @@ def setup(bot):
 
     # Inject Database Functions
     stderr("[Sopel_DatabaseCache] Implanting Database functions into bot.")
-    db.reset_nick_value = SopelDBCache.reset_nick_value
+    SopelDB.reset_nick_value = SopelDBCache.reset_nick_value
 
 
 class SopelDBCache:
