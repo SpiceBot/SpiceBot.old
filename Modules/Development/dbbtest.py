@@ -37,6 +37,16 @@ comdict = {
 @sopel.module.commands('dbbtest', 'deathbybandaidtest')
 def mainfunction(bot, trigger):
 
+    bot.say("dbb test module")
+
+    bot.deathbybandaid = dict()
+
+    bot.deathbybandaid['test'] = 'fart'
+
+    bot.say(str(bot.deathbybandaid))
+
+    return
+
     bot.say("gathering information")
     irc_events_list = class_directory(sopel.tools._events.events)
     irc_events_values = []
