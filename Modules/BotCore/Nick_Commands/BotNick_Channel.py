@@ -16,10 +16,6 @@ sys.path.append(shareddir)
 from BotShared import *
 
 
-
-
-
-
 comdict = {
             "author": "deathbybandaid",
             "contributors": [],
@@ -35,7 +31,7 @@ This will display bot channels
 """
 
 
-@module.nickname_commands('channel')
+@module.nickname_commands('channel', 'channels')
 @module.thread(True)
 def bot_command_hub(bot, trigger):
 
