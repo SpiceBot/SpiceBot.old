@@ -11,12 +11,16 @@ from sopel.tools import stderr
 @sopel.module.event('001')
 @sopel.module.rule('.*')
 def parse_event_001(bot, trigger):
-   stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
+    if 'RPL_Welcome' not in bot.memory:
+        bot.memory['RPL_Welcome'] = trigger.args[1]
+    stderr("\n" + trigger.event + "    " + str(trigger.args) + "\n")
 
 
 @sopel.module.commands('onetest')
 def mainfunction(bot, trigger):
 
+    bot.say(bot.memory['RPL_Welcome'])
+
     bot.say("Simulating 001 RPL_Welcome")
 
-    bot.say('001 Foo :Hello', bot.nick)
+    bot.write(('NOTICE', bot.nick), bot.memory['RPL_Welcome'])
