@@ -53,7 +53,9 @@ def dict_command_configs(bot):
 
     filedicts, filecount = configs_dir_read(bot, dirdict)
     bot.memory['dict_commands'] = dict()
-    bot.memory['dict_commands_count'] = filecount
+    # bot.memory['dict_commands_count'] = filecount
+    bot.memory['dict_commands_count'] = 0
+    return
 
     for dict_from_file in filedicts:
 
