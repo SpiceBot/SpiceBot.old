@@ -3,27 +3,27 @@
 
 # pylama:ignore=W0401,W0612
 
-from __future__ import unicode_literals, absolute_import, print_function, division
+from __future__ import (absolute_import, division, print_function,
+                        unicode_literals)
+
+import itertools
+# Additional
+import random
+import time
+import uuid
+from difflib import SequenceMatcher
+from operator import itemgetter
+from random import randint
+from statistics import mean
+
+import requests
 
 # sopel imports
 import sopel
+import spicemanip
+from lxml import html
 from sopel import module
 
-# Additional
-import random
-from random import randint
-import time
-from difflib import SequenceMatcher
-from operator import itemgetter
-import requests
-from lxml import html
-from statistics import mean
-import itertools
-import uuid
-
-import spicemanip
-
-# Global Vars
 from .Duels_Vars import *
 
 
@@ -4949,10 +4949,10 @@ def duels_valid_commands_alternative(bot):
 # Pinpoint real command from alternate
 def duels_valid_commands_alternative_find_match(bot, commandcompare):
     for subcom in duels_commands_alternate_list:
-            duels_commands_alternate_eval = eval("duels_commands_alternate_"+subcom)
-            if commandcompare.lower() in duels_commands_alternate_eval:
-                commandcompare = subcom
-                return commandcompare
+        duels_commands_alternate_eval = eval("duels_commands_alternate_"+subcom)
+        if commandcompare.lower() in duels_commands_alternate_eval:
+            commandcompare = subcom
+            return commandcompare
     return 'invalidcommand'
 
 
